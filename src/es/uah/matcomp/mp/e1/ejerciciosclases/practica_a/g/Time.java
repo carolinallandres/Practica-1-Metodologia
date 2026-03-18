@@ -1,12 +1,10 @@
 package es.uah.matcomp.mp.e1.ejerciciosclases.practica_a.g;
 
 public class Time {
-
+    //Atributos de la clase
     private int hour;
     private int minute;
     private int second;
-
-    private String resultado;
 
     public Time (int hour, int minute, int second) {
         this.hour = hour;
@@ -14,6 +12,7 @@ public class Time {
         this.second = second;
     }
 
+    //Getters y Setters
     public int getHour () {return hour;}
     public int getMinute () {return minute;}
     public int getSecond () {return second;}
@@ -22,6 +21,7 @@ public class Time {
     public void setMinute (int minute) {this.minute = minute;}
     public void setSecond (int second) {this.second = second;}
 
+    //Establecer el tiempo completo
     public void setTime (int hour, int minute, int second) {
         this.hour = hour;
         this.minute = minute;
@@ -29,75 +29,37 @@ public class Time {
     }
 
     public String toString () {
-        if (this.hour < 10) {
-            if (this.minute < 10) {
-                if (this.second < 10) {
-                    resultado = ("0" + this.hour + ":0" + this.minute + ":0" + this.second);
-                } else {
-                    resultado = ("0" + this.hour + ":0" + this.minute + ":" + this.second);
-                }
-            } else {
-                if (this.second < 10) {
-                    resultado = ("0" + this.hour + ":" + this.minute + ":0" + this.second);
-                } else {
-                    resultado = ("0" + this.hour + ":" + this.minute + ":" + this.second);
-                }
-            }
-        }
-        else {
-            if (this.minute < 10) {
-                if (this.second < 10) {
-                    resultado = (this.hour + ":0" + this.minute + ":0" + this.second);
-                } else {
-                    resultado = (this.hour + ":0" + this.minute + ":" + this.second);
-                }
-            } else {
-                if (this.second < 10) {
-                    resultado = (this.hour + ":" + this.minute + ":0" + this.second);
-                } else {
-                    resultado = (this.hour + ":" + this.minute + ":" + this.second);
-                }
-            }
-        }
-        return resultado;
+        return String.format("%02d:%02d:%02d",hour,minute,second);           
     }
-
+    
+    //Métodos para avanzar o retroceder el tiempo
     public Time nextSecond () {
-            this.second = this.second+1;
-
-            if (this.second == 60) {
-                this.second = 0;
-                this.minute = this.minute+1;
-
-                if (this.minute == 60) {
-                    this.minute = 0;
-                    this.hour = this.hour+1;
-
-                    if (this.hour == 24) {
-                        this.hour = 0;
-                    }
-                }
+        second ++;
+        if (second >= 60){
+            second = 0;
+            minute++;
+            if (minute >= 60){
+                minute = 0;
+                hour++;
             }
-            return this;
+                if (hour >= 24){
+                hour = 0;
+                }
+        }
+    return this;
     }
 
     public Time previousSecond() {
-        this.second = this.second -1;
-
-        if (this.second < 0) {
-            this.second = 59;
-            this.minute = this.minute -1;
-
-            if (this.minute < 0) {
-                this.minute = 59;
-                this.hour = this.hour -1;
-
-                if (this.hour < 0) {
-                    this.hour = 23;
-                }
+        second --;
+        if (second < 0) {
+            second = 59;
+            minute--;
+            if (minute < 0) {
+                minute = 59;
+                hour--;
             }
+                if (hour < 0) hour = 23;
         }
-        return this;
+    return this;
     }
-
 }
