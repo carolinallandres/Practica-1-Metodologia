@@ -1,4 +1,4 @@
-package es.uah.matcomp.mp.e1.ejerciciosclases.Practica1a.c;
+package es.uah.matcomp.mp.e1.ejerciciosclases.Practica1a.employee;
 
 public class Employee {
     

@@ -1,4 +1,4 @@
-package es.uah.matcomp.mp.e1.ejerciciosclases.Practica1a.e;
+package es.uah.matcomp.mp.e1.ejerciciosclases.Practica1a.account;
 
 public class Account {
     //Atributos de la clase

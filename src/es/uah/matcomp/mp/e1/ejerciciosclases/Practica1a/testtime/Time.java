@@ -1,4 +1,4 @@
-package es.uah.matcomp.mp.e1.ejerciciosclases.Practica1a.g;
+package es.uah.matcomp.mp.e1.ejerciciosclases.Practica1a.testtime;
 
 public class Time {
     //Atributos de la clase

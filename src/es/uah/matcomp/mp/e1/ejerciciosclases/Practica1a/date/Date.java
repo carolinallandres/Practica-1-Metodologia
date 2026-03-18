@@ -1,4 +1,4 @@
-package es.uah.matcomp.mp.e1.ejerciciosclases.Practica1a.f;
+package es.uah.matcomp.mp.e1.ejerciciosclases.Practica1a.date;
 
 public class Date {
     //Atributos de la clase

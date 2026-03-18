@@ -1,4 +1,4 @@
-package es.uah.matcomp.mp.e1.ejerciciosclases.Practica1a.h;
+package es.uah.matcomp.mp.e1.ejerciciosclases.Practica1a.ball;
 
 public class Ball {
     //Atributos de la clase

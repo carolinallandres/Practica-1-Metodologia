@@ -1,4 +1,4 @@
-package es.uah.matcomp.mp.e1.ejerciciosclases.Practica1a.b;
+package es.uah.matcomp.mp.e1.ejerciciosclases.Practica1a.rectangle;
 
 public class Rectangle {
 

@@ -1,4 +1,4 @@
-package es.uah.matcomp.mp.e1.ejerciciosclases.Practica1a.a;
+package es.uah.matcomp.mp.e1.ejerciciosclases.Practica1a.circle;
 
 public class TestCircle {
     public static void main(String[] args) {
