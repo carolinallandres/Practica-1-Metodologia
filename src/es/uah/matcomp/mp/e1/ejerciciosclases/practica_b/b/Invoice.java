@@ -1,34 +1,63 @@
 package es.uah.matcomp.mp.e1.ejerciciosclases.practica_b.b;
 
 public class Invoice {
-
     private int id;
     private Customer customer;
     private double amount;
 
-    public Invoice(int id, Customer customer, double amount) {
-        this.id = id;
-        this.customer = customer;
+    //CONSTRUCTORES
+
+    public Invoice (int id,Customer customer, double amount){
+        this.id=id;
+        this.customer=customer;
+        this.amount=amount;
+    }
+
+    //GETTERS
+
+    public int getId() {
+        return id;
+    }
+
+    public Customer getCustomer() {
+        return customer;
+    }
+
+    public double getAmount() {
+        return amount;
+    }
+
+    //Getters del objeto Customer
+
+    public int getCustomerId(){
+        return customer.getId();
+    }
+
+    public String getCustomerName(){
+        return customer.getName();
+    }
+
+    public double getCustomerDiscount(){
+        return customer.getDiscount();
+    }
+
+    public double getAmountAfterDiscount(){
+        return amount-(amount*customer.getDiscount()/100.0);
+    }
+
+    //SETTERS
+
+    public void setAmount(double amount) {
         this.amount = amount;
     }
 
-    public int getId() {return id;}
+    public void setCustomer(Customer customer) {
+        this.customer=customer;
+    }
 
-    public Customer getCustomer() {return customer;}
+    //MÉTODOS
 
-    public void setCustomer (Customer customer) {this.customer = customer;}
-
-    public double getAmount() {return amount;}
-
-    public void setAmount(double amount) {this.amount = amount;}
-
-    public int getCustomerId() {return this.customer.getId();}
-
-    public String getCustomerName() {return this.customer.getName();}
-
-    public int getCustomerDiscount() {return this.customer.getDiscount();}
-
-    public double getAmountAfterDiscount() {return amount-this.customer.getDiscount();}
-
-    public String toString() {return "Invoice[id="+id+",customer="+customer+",amount="+amount+"]";}
+    public String toString(){
+        return"Invoice[id="+id+","+customer+",amount="+amount+"]";
+    }
 }
