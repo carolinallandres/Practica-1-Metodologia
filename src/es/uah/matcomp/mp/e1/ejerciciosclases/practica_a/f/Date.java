@@ -1,12 +1,10 @@
 package es.uah.matcomp.mp.e1.ejerciciosclases.practica_a.f;
 
 public class Date {
-
+    //Atributos de la clase
     private int day;
     private int month;
     private int year;
-
-    private String resultado;
 
     public Date (int day, int month, int year) {
         this.day = day;
@@ -14,6 +12,7 @@ public class Date {
         this.year = year;
     }
 
+    //Getters y Setters
     public int getDay () { return day;}
 
     public int getMonth () { return month;}
@@ -26,6 +25,7 @@ public class Date {
 
     public void setYear (int year) {this.year = year;}
 
+    //Establece la fecha completa
     public void setDate (int day, int month, int year) {
         this.day = day;
         this.month = month;
@@ -33,19 +33,9 @@ public class Date {
     }
 
     public String toString () {
-        if (this.day < 10) {
-            if (this.month < 10) {
-                resultado = ("0" + this.day + "/0" + this.month + "/" + this.year);
-            } else {
-                resultado = ("0" + this.day + "/" + this.month + "/" + this.year);
-            }
-        } else {
-            if (this.month < 10) {
-                resultado = (this.day + "/0" + this.month + "/" + this.year);
-            } else {
-                resultado = (this.day + "/" + this.month + "/" + this.year);
-            }
+        if(day<=31 && month <= 12){
+            return String.format("%02d/%02d/%02d",day,month,year);
         }
-        return resultado;
+        return null;
     }
 }
