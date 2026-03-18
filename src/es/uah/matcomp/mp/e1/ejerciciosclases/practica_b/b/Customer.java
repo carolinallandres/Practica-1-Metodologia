@@ -3,19 +3,14 @@ package es.uah.matcomp.mp.e1.ejerciciosclases.practica_b.b;
 public class Customer {
     private int id;
     private String name;
-    private char gender;// EN CASO DE CARACTER INVALIDO gender='m'
+    private int discount;
 
     //CONSTRUCTORES
 
-    public Customer (int id, String name, char gender){
+    public Customer (int id,String name, int discount){
         this.id=id;
         this.name=name;
-        if(gender!='m' && gender!='f'){
-           this.gender='m';
-        }
-        else{
-            this.gender=gender;
-        }
+        this.discount=discount;
     }
 
     //GETTERS
@@ -28,13 +23,19 @@ public class Customer {
         return name;
     }
 
-    public char getGender() {
-        return gender;
+    public int getDiscount() {
+        return discount;
+    }
+
+    //SETTERS
+
+    public void setDiscount(int discount) {
+        this.discount=discount;
     }
 
     //MÉTODOS
 
     public String toString(){
-        return name+"("+id+")";
+        return name+"("+id+")("+discount+"%)";
     }
 }
