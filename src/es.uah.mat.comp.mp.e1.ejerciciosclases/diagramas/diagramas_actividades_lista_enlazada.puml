@@ -1,0 +1,54 @@
+@startuml /Insertar un elemento
+start
+:Create a new node;
+:Add value to node;
+if (Empty list) then (yes)
+    :Head = new node;
+    stop
+else (no)
+    :Traverse until the end;
+    :Add at the last;
+    stop
+endif
+@enduml
+
+
+@startuml /Buscar un elemento
+start
+:Request data to search;
+:Pointer = head;
+while (Pointer != null)
+    if (Value of node == search value) then (yes)
+        :Show "Find data";
+        stop
+    else (no)
+        :Pointer = next node;
+    endif
+endwhile
+:Show "data not found";
+stop
+@enduml
+
+
+@startuml
+start
+:Request data to delete;
+:Pointer = head;
+:Previous = null;
+while (Pointer != null)
+    if (Value of node == value to delete) then (yes)
+        if (Node is the head) then (yes)
+            :Head = NextPointer;
+            stop
+        else (no)
+            :NextPrevious = NextPointer;
+            stop
+        endif
+    else (no)
+        :Previous = Pointer;
+        :Pointer = NextPointer;
+    endif
+endwhile
+:Show "data not found";
+stop
+@enduml

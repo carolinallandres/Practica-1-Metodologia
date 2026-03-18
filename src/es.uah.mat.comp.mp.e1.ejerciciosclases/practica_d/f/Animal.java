@@ -1,0 +1,10 @@
+package es.uah.matcomp.mp.e1.ejerciciosclases.practica_d.f;
+
+abstract class Animal {
+
+    protected String name;
+
+    public Animal(String name) {this.name = name;}
+
+    public abstract void greets();
+}

@@ -1,0 +1,11 @@
+@startuml
+
+actor User
+participant List
+participant Node
+
+User -> List: insert(data)
+List -> Node: Create a new node (data)
+List -> List: Update the nodes
+
+@enduml

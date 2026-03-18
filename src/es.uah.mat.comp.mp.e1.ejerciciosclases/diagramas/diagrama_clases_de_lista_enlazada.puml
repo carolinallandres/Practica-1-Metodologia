@@ -1,0 +1,18 @@
+@startuml
+
+class Node {
+    +data
+    +next
+}
+
+class LinkedList {
+    -head
+    +insert(data)
+    +search(data)
+    +delete(data)
+}
+
+LinkedList --> Node : include >
+Node --> Node : next >
+
+@enduml

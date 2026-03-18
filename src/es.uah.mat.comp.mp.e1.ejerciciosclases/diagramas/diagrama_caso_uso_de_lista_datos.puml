@@ -1,0 +1,10 @@
+@startuml
+
+actor User
+
+User --> (Insert data)
+User --> (Search data)
+User--> (Delete data)
+User--> (Show data)
+
+@enduml

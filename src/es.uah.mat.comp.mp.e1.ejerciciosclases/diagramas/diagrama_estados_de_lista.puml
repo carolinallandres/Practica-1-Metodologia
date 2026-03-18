@@ -1,0 +1,14 @@
+@startuml
+
+[*] --> Empty
+
+Empty --> FirstElement: insert
+FirstElement --> NextElement: insert
+NextElement --> FirstElement: delete
+FirstElement --> Empty: delete
+
+NextElement --> NextElement: search
+FirstElement --> FirstElement: search
+Empty --> Empty: search
+
+@enduml
