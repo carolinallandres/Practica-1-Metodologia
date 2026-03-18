@@ -2,44 +2,62 @@ package es.uah.matcomp.mp.e1.ejerciciosclases.practica_b.c;
 
 public class Account {
     private int id;
-    private  Customer customer;
-    private double balance=0.0;
+    private Customer customer;
+    private double balance;
 
-    public Account(int id,Customer customer,double balance){
+    //CONSTRUCTORES
+
+    public Account(int id, Customer customer,double balance){
         this.id=id;
         this.customer=customer;
         this.balance=balance;
     }
 
-    public Account(int id,Customer customer){
+    public Account(int id, Customer customer){
         this.id=id;
         this.customer=customer;
+        this.balance=0.0;
     }
 
-    public int getId(){return id;}
+    //GETTERS
 
-    public Customer getCustomer(){return customer;}
+    public int getId() {
+        return id;
+    }
 
-    public double getBalance(){return balance;}
+    public Customer getCustomer() {
+        return customer;
+    }
 
-    public void setBalance(double balance){this.balance=balance;}
+    public double getBalance() {
+        return balance;
+    }
+
+    //SETTERS
+
+    public void setBalance(double balance) {
+        this.balance = balance;
+    }
+
+    //MÉTODOS
 
     public String toString(){
-        return customer.toString()+" balance="+balance;
+        balance=balance%.2f;
+        return customer+" balance=$"+balance;
     }
 
-    public String getCustomerName(){return customer.getName();}
+    public Account deposit(double amount){  //Suma la cantidad amount al balance de la cuenta
+        balance+=amount;
+        return this;
+    }
 
-    public Account deposit(double amount){
-        this.balance=balance+amount;
-        return this;}
-
-    public Account withdraw(double amount){
+    public Account withdraw(double amount){ //Resta, si hay suficiente dinero, amount del balance
         if(balance>=amount){
-            this.balance=balance-amount;}
-
-        else{
-            System.out.println("amount withdrawn exceeds the current balance!");}
-
-        return this;}
+            balance-=amount;
+        }
+        else{   //Si no hay suficiente dinero muestra mensaje
+            System.out.println("amount withdrawn exceeds the curent balance!");
+        }
+        return this;
+    }
 }
