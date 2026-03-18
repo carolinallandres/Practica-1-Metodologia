@@ -1,25 +1,35 @@
 package es.uah.matcomp.mp.e1.ejerciciosclases.practica_b.a;
 
 public class Author {
-      private String name;
+    private String name;
     private String email;
-    private char gender; // 'm' o 'f'
 
-    public Author(String name, String email, char gender) {
-        this.name = name;
-        this.email = email;
-        this.gender = gender;
+    //CONSTRUCTORES
+
+    public Author (String name,String email){
+        this.name=name;
+        this.email=email;
     }
 
-    public String getName() {return name;}
+    //GETTERS
 
-    public String getEmail() {return email;}
+    public String getName() {
+        return name;
+    }
 
-    public char getGender() {return gender;}
+    public String getEmail() {
+        return email;
+    }
 
-    public void setEmail(String email) {this.email = email;}
+    //SETTERS
 
-    public String toString() {
-        return "Author[name=" + name + ",email=" + email + ",gender=" + gender + "]";
+    public void setEmail(String email){
+        this.email=email;
+    }
+
+    //MÉTODOS
+
+    public String toString(){
+        return "Author[name="+name+",email="+email+"]";
     }
 }
