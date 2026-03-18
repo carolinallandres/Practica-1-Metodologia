@@ -1,25 +1,40 @@
 package es.uah.matcomp.mp.e1.ejerciciosclases.practica_b.b;
 
 public class Customer {
-
     private int id;
     private String name;
-    private int discount;
+    private char gender;// EN CASO DE CARACTER INVALIDO gender='m'
 
+    //CONSTRUCTORES
 
-    public Customer(int id, String name,int discount){
-        this.id = id;
-        this.name = name;
-        this.discount = discount;
+    public Customer (int id, String name, char gender){
+        this.id=id;
+        this.name=name;
+        if(gender!='m' && gender!='f'){
+           this.gender='m';
+        }
+        else{
+            this.gender=gender;
+        }
     }
 
-    public int getId() {return id;}
+    //GETTERS
 
-    public String getName() {return name;}
+    public int getId() {
+        return id;
+    }
 
-    public int getDiscount() {return discount;}
+    public String getName() {
+        return name;
+    }
 
-    public void setDiscount(int discount) {this.discount = discount;}
+    public char getGender() {
+        return gender;
+    }
 
-    public String toString(){return name+"("+id+")("+discount+")";}
+    //MÉTODOS
+
+    public String toString(){
+        return name+"("+id+")";
+    }
 }
