@@ -2,32 +2,15 @@ package es.uah.matcomp.mp.e1.ejerciciosclases.practica_c.a;
 
 public class TestCylinder {
 
-    public static void main (String[] args) {
-        // Declare and allocate a new instance of cylinder
-        //   with default color, radius, and height
-        Cylinder c1 = new Cylinder();
-        System.out.println("Cylinder:"
-                + " radius=" + c1.getRadius()
-                + " height=" + c1.getHeight()
-                + " base area=" + c1.getArea()
-                + " volume=" + c1.getVolume());
+    public static void main(String[] args) {
 
-        // Declare and allocate a new instance of cylinder
-        //   specifying height, with default color and radius
-        Cylinder c2 = new Cylinder(10.0);
-        System.out.println("Cylinder:"
-                + " radius=" + c2.getRadius()
-                + " height=" + c2.getHeight()
-                + " base area=" + c2.getArea()
-                + " volume=" + c2.getVolume());
+        Cylinder c1 = new Cylinder(); //el primer cilindro utiliza los parámetros por defecto
+        System.out.println("Cilindro: radio=" + c1.getRadius() + " altura=" + c1.getHeight() + " base del area=" + c1.getArea() + " volumen=" + c1.getVolume());
 
-        // Declare and allocate a new instance of cylinder
-        //   specifying radius and height, with default color
-        Cylinder c3 = new Cylinder(2.0, 10.0);
-        System.out.println("Cylinder:"
-                + " radius=" + c3.getRadius()
-                + " height=" + c3.getHeight()
-                + " base area=" + c3.getArea()
-                + " volume=" + c3.getVolume());
+        Cylinder c2 = new Cylinder(10.0); //del segundo cilindro modificamos el la altura
+        System.out.println("Cilindro: radio=" + c2.getRadius() + " altura=" + c2.getHeight() + " base del area=" + c2.getArea() + " volumen=" + c2.getVolume());
+
+        Cylinder c3 = new Cylinder(2.0, 10.0); //del tercer cilindro modificamos el ladio y la altura
+        System.out.println("Cilindro: radio=" + c3.getRadius() + " altura=" + c3.getHeight() + " base del area=" + c3.getArea() + " volumen=" + c3.getVolume());
     }
 }
