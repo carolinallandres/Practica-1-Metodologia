@@ -1,0 +1,25 @@
+@startuml
+
+abstract class Animal {
+    +greeting()
+}
+
+class Cat {
+    +greeting()
+}
+
+class Dog {
+    +greeting()
+    +greeting(another: Dog)
+}
+
+class BigDog {
+    +greeting()
+    +greeting(another: Dog)
+}
+
+Animal <|-- Cat
+Animal <|-- Dog
+Dog <|-- BigDog
+
+@enduml
