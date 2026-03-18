@@ -3,10 +3,13 @@ package es.uah.matcomp.mp.e1.ejerciciosclases.practica_a.b;
 public class Rectangle {
 
     //Atributos
-    private float length = 1.0f;
-    private float width = 1.0f;
+    private float length;
+    private float width;
 
+    //Valores por defecto de los atributos
     public Rectangle() {
+        this.length = 1.0f;
+        this.width = 1.0f;
     }
 
     public Rectangle(float length, float width) {
@@ -14,7 +17,7 @@ public class Rectangle {
         this.width = width;
     }
 
-
+    //Getters y Setters para los valores de ancho y largo del rectángulo
     public float getLength() {
         return length;
     }
@@ -31,11 +34,12 @@ public class Rectangle {
         this.width = width;
     }
 
-
+    //Cálculo del área del rectángulo
     public double getArea() {
         return length*width;
     }
-
+    
+    //Cálculo del perimetro del rectángulo
     public double getPerimeter() {
         return 2*length+2*width;
     }

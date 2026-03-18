@@ -2,6 +2,7 @@ package es.uah.matcomp.mp.e1.ejerciciosclases.practica_a.d;
 
 public class InvoiceItem {
 
+    //Atributos de la clase
     private String id;
     private String desc;
     private int qty;
@@ -15,6 +16,7 @@ public class InvoiceItem {
         this.unitPrice = unitPrice;
     }
 
+    //Getters y Setters de los atributos
     public String getId () {return id;}
 
     public String getDesc () {return desc;}
@@ -27,6 +29,7 @@ public class InvoiceItem {
 
     public void setUnitPrice (double unitPrice) {this.unitPrice=unitPrice;}
 
+    //Cálculo del precio total de la factura 
     public double getTotal () {return unitPrice*qty;}
 
     public String toString () {return "InvoiceItem[id="+id+",desc="+desc+",qty="+qty+",uniPrice="+unitPrice+"]";}

@@ -1,6 +1,7 @@
 package es.uah.matcomp.mp.e1.ejerciciosclases.practica_a.h;
 
 public class Ball {
+    //Atributos de la clase
     private float x;
     private float y;
     private int radius;
@@ -15,6 +16,7 @@ public class Ball {
         this.yDelta = yDelta;
     }
 
+    //Getters y Setters 
     public float getX() {return this.x;}
 
     public void setX(float x) {this.x = x;}
@@ -34,12 +36,14 @@ public class Ball {
     public float getYDelta() {return this.yDelta;}
 
     public void setYDelta(float yDelta) {this.yDelta = yDelta;}
-
+    
+    //Mover la pelota
     public void move() {
-        this.x = this.x+this.xDelta;
-        this.y = this.y+yDelta;
+        this.x += this.xDelta;
+        this.y += this.yDelta;
     }
 
+    //Métodos para cambiar el sentido de los deltas correspondientes
     public void reflectHorizontal() {this.xDelta = -this.xDelta;}
 
     public void reflectVertical() {this.yDelta = -this.yDelta;}
