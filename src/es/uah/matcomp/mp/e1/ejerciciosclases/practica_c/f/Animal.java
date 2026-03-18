@@ -7,10 +7,14 @@ public class Animal {
 
 
     //Constructores
-    public Animal(String name) {this.name = name;}
+    public Animal(String name) { //inicializa el nombre
+        this.name = name;
+    }
 
 
     //Métodos
     @Override
-    public String toString() {return "Animal[name=" + name + "]";}
+    public String toString() { //devuelve el nombre del animal
+        return "Animal[name=" + name + "]";
+    }
 }

@@ -1,25 +1,24 @@
 package es.uah.matcomp.mp.e1.ejerciciosclases.practica_c.f;
 
-public class Dog extends Mammal {
+public class Dog extends Mammal { //hereda de la clase mamífero
 
     //Constructores
-    public Dog(String name) {
+    public Dog(String name) {  //inicializa el nombre del perro llamando al constructor de la clase mamífero (super())
         super(name);
     }
 
 
-    public void greets() {
+    //Métodos
+    public void greets() { //devuelve el ladrido de un perro
         System.out.println("Woof");
     }
 
-    public void greets(Dog another) {
+    public void greets(Dog another) { //sobrecarga el metodo anterior para recibir otro perro como parametro y ladrar diferente
         System.out.println("Woooof");
     }
 
-
-    //Métodos
     @Override
-    public String toString() {
+    public String toString() { //devuelve el nombre del perro utilizando la clase mamífero (super.toString())
         return "Dog[" + super.toString() + "]";
     }
 }

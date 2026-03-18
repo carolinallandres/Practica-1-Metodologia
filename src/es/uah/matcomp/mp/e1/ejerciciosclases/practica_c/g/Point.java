@@ -8,24 +8,34 @@ public class Point {
 
 
     //Constructores
-    public Point(int x, int y) {
+    public Point(int x, int y) { //inicializa los atributos de la clase
         this.x = x;
         this.y = y;
     }
 
 
     //Métodos
-    public String toString() {return "Point: (" + x + "," + y + ")";}
+    public String toString() { //devuelve las coordenadas (x,y) del punto
+        return "Point: (" + x + "," + y + ")";
+    }
 
-    public int getX() { return x; }
+    public int getX() { //devuelve la coordenada x
+        return x;
+    }
 
-    public int getY() { return y; }
+    public int getY() { //devuelve la coordenada y
+        return y;
+    }
 
-    public void setX(int x) { this.x = x; }
+    public void setX(int x) { //modifica la coordenada x
+        this.x = x;
+    }
 
-    public void setY(int y) { this.y = y; }
+    public void setY(int y) { //modifica la coordenada y
+        this.y = y;
+    }
 
-    public void setXY(int x, int y) {
+    public void setXY(int x, int y) { //modifica la coordenada x,y al mismo tiempo
         this.x = x;
         this.y = y;
     }

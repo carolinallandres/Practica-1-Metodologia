@@ -8,32 +8,44 @@ public class Circle {
 
 
     //Constructores
-    public Circle() {
+    public Circle() { //constructor que inicializa el valor del color y el radio a unos determinados
         this.radius = 1.0;
         this.color = "red";
     }
 
-    public Circle(double radius) {
+    public Circle(double radius) { //constructor que permite inicializar el valor del radio y el valor específico del color
         this.radius = radius;
         this.color = "red";
     }
 
-    public Circle(double radius, String color) {
+    public Circle(double radius, String color) { //constructor que permite inicializar el valor del radio y el color
         this.radius = radius;
         this.color = color;
     }
 
 
     //Métodos
-    public double getRadius() {return radius;}
+    public double getRadius() { //devuelve el radio
+        return radius;
+    }
 
-    public String getColor() {return color;}
+    public String getColor() { //devuelve el color
+        return color;
+    }
 
-    public void setRadius(double radius) {this.radius = radius;}
+    public void setRadius(double radius) { //modifica el radio
+        this.radius = radius;
+    }
 
-    public void setColor(String color) {this.color = color;}
+    public void setColor(String color) { //modifica el color
+        this.color = color;
+    }
 
-    public double getArea() {return Math.PI * radius * radius;}
+    public double getArea() { //devuelve el área del círculo
+        return Math.PI * radius * radius;
+    }
 
-    public String toString() {return "Circle[radius=" + radius + ", color=" + color + "]";}
+    public String toString() { //devuelve los atributos del círculo
+        return "Circle[radius=" + radius + ", color=" + color + "]";
+    }
 }

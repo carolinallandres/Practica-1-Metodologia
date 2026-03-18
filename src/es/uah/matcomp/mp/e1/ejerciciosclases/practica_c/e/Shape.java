@@ -8,22 +8,32 @@ public class Shape {
 
 
     //Constructores
-    public Shape() {}
+    public Shape() {} //constructor por defecto
 
-    public Shape(String color, boolean filled) {
+    public Shape(String color, boolean filled) { //inicializa sus atributos
         this.color = color;
         this.filled = filled;
     }
 
 
     //Métodos
-    public String getColor() {return color;}
+    public String getColor() { //devuelve el color
+        return color;
+    }
 
-    public void setColor(String color) {this.color = color;}
+    public void setColor(String color) { //modifica el color
+        this.color = color;
+    }
 
-    public boolean isFilled() {return filled;}
+    public boolean isFilled() { //devuelve si está completo
+        return filled;
+    }
 
-    public void setFilled(boolean filled) {this.filled = filled;}
+    public void setFilled(boolean filled) { //modifica si está completo
+        this.filled = filled;
+    }
 
-    public String toString() {return "Shape[color="+color+", filled="+filled+"]";}
+    public String toString() { //devuelve los atributos
+        return "Shape[color="+color+", filled="+filled+"]";
+    }
 }
