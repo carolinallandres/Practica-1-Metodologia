@@ -4,19 +4,16 @@ public class Circle {
 
     //Atributos
     private double radius;
-    private String color;
-
+   
     //Constructores
     //Constructor por defecto de la clase
     public Circle() {
         this.radius = 1.0;
-        this.color = "red";
     }
 
-    //Constructor usando el valor del radio dado y color por defecto
+    //Constructor usando el valor del radio dado 
     public Circle(double radius) {
         this.radius = radius;
-        this.color = "red";
     }
 
     //Métodos
